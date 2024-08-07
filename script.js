@@ -22,20 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.addEventListener("click", function () {
             const imageSource = this.closest("div").previousElementSibling.src;
 
-            
+
             const downloadLink = document.createElement("a");
 
-           
+
             downloadLink.href = imageSource;
             downloadLink.download = "downloaded_image.jpg";
 
-            
+
             document.body.appendChild(downloadLink);
 
-            
+
             downloadLink.click();
 
-          
+
             document.body.removeChild(downloadLink);
         });
     });
